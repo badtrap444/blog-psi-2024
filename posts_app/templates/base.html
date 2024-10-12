@@ -1,0 +1,75 @@
+{% load static %}
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Bygolis{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@500&display=swap" rel="stylesheet">
+    <style>
+      .suse-letrinhas {
+        font-family: "SUSE", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+      }
+    </style>
+  </head>
+  <body class="suse-letrinhas">
+    {% include '_navbar.html' %}
+    <nav class="navbar navbar-expand-lg py-3 bg-success">
+        <div class="container">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              {% include '_message.html' %}
+    {% block content %}
+		{% endblock %} 
+              
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <div class="container-fluid bg-success">
+      <div class="container">
+        <div class="row g-0">
+          <div class="col-md-6 d-flex align-items-center">
+            <div class="card-body ">
+              <h1 style="font-size: 3.5em;" class="text-white">Distúrbios <br> alimentares</h1>
+            </div>
+          </div>
+          <div class="col-md-6">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid" style="padding: 1px;">
+      <div class="container" >
+        <h2 class="text-center py-3 text-success">O que é este site?</h2>
+        <p class="mt-1 mb-5" style="font-size: 1.3em;">
+			O blog "Bygolis" é um espaço seguro e informativo dedicado a desmistificar os distúrbios
+			alimentares e oferecer apoio a pessoas que enfrentam esses desafios. Nosso objetivo é
+			promover a conscientização sobre a saúde mental e emocional relacionada à alimentação, oferecendo
+			informações precisas e atualizadas sobre os diferentes tipos de distúrbios, suas causas, sintomas e tratamentos.
+			Lembre-se que o objetivo principal do blog é oferecer informações confiáveis e promover a saúde mental.
+			Ao criar conteúdo de qualidade, você estará contribuindo para um mundo mais saudável e acolhedor para todos.
+        </p>
+      </div>
+    </div>
+
+    <footer class="text-center py-4 bg-success">
+      <div class="container">
+          <p class="text-white">&copy; 2024 Bygolis. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
